@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="p-5">
+    <div className="p-10">
       <h1 className="font-bold text-4xl">About Us</h1>
       <p>
         Fibre Flo, established in 2023, provides telecoms infrastructure

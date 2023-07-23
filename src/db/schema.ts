@@ -18,3 +18,15 @@ export const emailPreferences = mysqlTable("email_preferences", {
 });
 
 export type EmailPreference = InferModel<typeof emailPreferences>;
+
+export const posts = mysqlTable("posts", {
+  id: serial("id").primaryKey(),
+  title: varchar("title", { length: 191 }).notNull(),
+  content: varchar("content", { length: 764 }).notNull(),
+  image: varchar("image", { length: 191 }).notNull(),
+  published: boolean("published").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  slug: varchar("slug", { length: 191 }).notNull(),
+});
+
+export type Post = InferModel<typeof posts>;

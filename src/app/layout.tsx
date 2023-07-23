@@ -6,6 +6,8 @@ import { Roboto } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { cn } from "@/lib/utils";
+import { Toaster } from "sonner";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const roboto = Roboto({ subsets: ["latin"], weight: "400" });
 
@@ -20,21 +22,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head />
-      <body
-        className={
-          (cn("min-h-screen bg-background font-sans antialiased"),
-          roboto.className)
-        }
-      >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Navbar />
-          {children}
-          <Footer />
-          <TailwindIndicator />
-        </ThemeProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <head />
+        <body
+          className={
+            (cn("min-h-screen bg-background font-sans antialiased"),
+            roboto.className)
+          }
+        >
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Navbar />
+            {children}
+            <Footer />
+            <Toaster />
+            <TailwindIndicator />
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
