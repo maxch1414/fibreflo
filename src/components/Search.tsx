@@ -35,6 +35,7 @@ export default function Search() {
       link: "contact",
     },
     { name: "Services", link: "services" },
+    { name: "News", link: "news" },
   ];
   const [data, setData] = React.useState(pages);
   const [isPending, startTransition] = React.useTransition();

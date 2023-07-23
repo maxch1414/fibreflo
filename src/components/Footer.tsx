@@ -54,6 +54,29 @@ export default function Footer() {
                 </ul>
               </div>
             ))}
+            <div className="space-y-3">
+              <h4 className="text-base font-medium p-4">Contact Us</h4>
+              <ul className="space-y-3">
+                <li>
+                  <Link
+                    className={buttonVariants({ variant: "link" })}
+                    href="tel:+4407871300214"
+                  >
+                    07871 300214
+                    <span className="sr-only">07871 300214</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={buttonVariants({ variant: "link" })}
+                    href="mailto: enquiries@fibreflo.co.uk"
+                  >
+                    enquiries@fibreflo.co.uk
+                    <span className="sr-only">enquiries@fibreflo.co.uk</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </section>
           <section
             id="newsletter"

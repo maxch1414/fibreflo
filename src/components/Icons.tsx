@@ -1,13 +1,16 @@
 import {
   AlignJustify,
   Cable,
+  ChevronLeft,
   Copyright,
   Github,
   Loader2,
+  Image,
   Search,
   Send,
   Moon,
   SunMedium,
+  AlertTriangle,
   X,
   type LucideIcon,
   type LucideProps,
@@ -16,16 +19,19 @@ import {
 export type Icon = LucideIcon;
 
 export const Icons = {
+  chevronLeft: ChevronLeft,
   menuOpen: AlignJustify,
   menuClose: X,
   copyright: Copyright,
   moon: Moon,
+  placeholder: Image,
   search: Search,
   send: Send,
   spinner: Loader2,
   sun: SunMedium,
   github: Github,
   logo: Cable,
+  warning: AlertTriangle,
   facebook: ({ ...props }: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" {...props}>
       <path

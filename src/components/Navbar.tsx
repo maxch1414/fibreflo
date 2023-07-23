@@ -12,10 +12,26 @@ import { buttonVariants } from "./ui/button";
 export default function Navbar() {
   const pathname = usePathname();
   const navigation = [
-    { name: "About", href: "about", current: pathname === "/about" },
-    { name: "Contact", href: "contact", current: pathname === "/contact" },
-    { name: "Services", href: "services", current: pathname === "/services" },
-    { name: "Calendar", href: "#", current: false },
+    {
+      name: "About",
+      href: "/about",
+      current: pathname === "/about",
+    },
+    {
+      name: "Contact",
+      href: "/contact",
+      current: pathname === "/contact",
+    },
+    {
+      name: "Services",
+      href: "/services",
+      current: pathname === "/services",
+    },
+    {
+      name: "News",
+      href: "/news",
+      current: pathname.startsWith("/news"),
+    },
   ];
   return (
     <Disclosure as="nav" className="bg-background">

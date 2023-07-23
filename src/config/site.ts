@@ -4,7 +4,7 @@ import { slugify } from "@/lib/utils";
 export type SiteConfig = typeof siteConfig;
 
 const links = {
-  twitter: "https://twitter.com/maxc14_",
+  twitter: "https://twitter.com/FibreFlo",
   github: "https://github.com/maxch1414",
   githubAccount: "https://github.com/maxch1414",
 };
@@ -27,6 +27,11 @@ export const siteConfig = {
         {
           title: "Contact",
           href: "/contact",
+          external: false,
+        },
+        {
+          title: "Services",
+          href: "/services",
           external: false,
         },
         {
