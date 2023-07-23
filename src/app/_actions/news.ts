@@ -3,7 +3,6 @@
 import { db } from "@/db";
 import { Post, posts } from "@/db/schema";
 import { eq } from "drizzle-orm";
-import { notFound } from "next/navigation";
 
 export async function getAllNews() {
   const allPosts: Post[] = await db.select().from(posts);
